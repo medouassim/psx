@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background-color: #333;
+  position: relative;
+}
+
+.container section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  width: 50%;
+  position: absolute;
+  transition: width 1s ease;
+}
+
+.container section.left {
+  left: 0;
+  background: linear-gradient(rgba(87, 84, 236, 0.7), rgba(87, 84, 236, 0.8)), url("../ps.jpg") no-repeat;
+  background-size: cover;
+}
+
+.container section.left button:hover {
+  background-color: #5754ec;
+  border-color: #5754ec;
+}
+
+.container section.right {
+  right: 0;
+  background: linear-gradient(rgba(43, 43, 43, 0.7), rgba(43, 43, 43, 0.7)), url("../xbox.jpg") no-repeat;
+}
+
+.container section.right button:hover {
+  background-color: #1c7a1c;
+  border-color: #1c7a1c;
+}
+
+.container section h1 {
+  position: relative;
+  bottom: 1rem;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.container section button {
+  text-transform: uppercase;
+  padding: 1.2rem 4rem;
+  border: 2px solid #fff;
+  background: none;
+  color: #fff;
+  outline: none;
+  position: relative;
+  bottom: 1rem;
+  font-size: .8rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+.hover-left .left {
+  width: 75%;
+}
+
+.hover-left .right {
+  width: 25%;
+}
+
+.hover-right .right {
+  width: 75%;
+}
+
+.hover-right .left {
+  width: 25%;
+}
+
+@media (max-width: 800px) {
+  .title {
+    font-size: 25px !important;
+  }
+  button {
+    padding: .7rem 2rem !important;
+  }
+}
